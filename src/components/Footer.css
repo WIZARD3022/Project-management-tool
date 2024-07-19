@@ -1,0 +1,140 @@
+:root {
+    --text-font: "Hind", sans-serif;
+    --title-font: "Montserrat", sans-serif;
+  
+    --white: hsl(0, 0%, 100%);
+    --dark: hsl(0, 0%, 8%);
+    --dark-fade: rgba(0, 0, 0, 0.35);
+    --gray: hsl(201, 100%, 50%);
+    --light-gray: hsl(232, 93%, 50%);
+    --faded-gray: hsl(0, 0%, 88%);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--text-font);
+    color: var(--dark);
+  }
+  
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer {
+    margin-top: 80px;
+  }
+  
+  .footer__redes-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 45px auto;
+  }
+  
+  .footer__redes-wrapper li {
+    display: inline-block;
+    transition: all ease 0.3s;
+  }
+  
+  .footer__redes-wrapper li:hover {
+    color: var(--gray);
+  }
+  
+  .footer__link {
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    font-size: 14px;
+  }
+  
+  .fab {
+    margin-right: 8px;
+  }
+  
+  .footer__texto {
+    color: var(--light-gray);
+    text-align: center;
+  }
+  
+  
+  .separador {
+    background-color: var(--faded-gray);
+    height: 2px;
+    max-width: 30px;
+    margin: 15px auto 20px;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .owl-height {
+    transition: height 0.5s ease-in-out;
+  }
+  
+  .owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .owl-carousel .owl-item .owl-lazy:not([src]),
+  .owl-carousel .owl-item .owl-lazy[src^=""] {
+    max-height: 0;
+  }
+  
+  .owl-carousel .owl-item img.owl-lazy {
+    transform-style: preserve-3d;
+  }
+  
+  .owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+  }
+  
+  
+  .owl-carousel .owl-video-play-icon:hover {
+    -ms-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+  }
+  
+  .owl-carousel .owl-video-playing .owl-video-play-icon,
+  .owl-carousel .owl-video-playing .owl-video-tn {
+    display: none;
+  }
+  
+  .owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: opacity 0.4s ease;
+  }
+  
+  .owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+  
